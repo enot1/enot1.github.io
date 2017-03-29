@@ -8,7 +8,7 @@
   height: 100px;
   width: 100%;
   background-color: rgb(254, 0, 0);
-  min-width: 920px;
+  min-width: 320px;
  }
  
  .header_left {
@@ -91,14 +91,14 @@
   height: 100%;
   background-image: url("../img/backgr.png");
   background-repeat: repeat;
-  min-width: 920px;
+  min-width: 320px;
  }
  
  body {
   border: solid 2px red;
   margin: 0 auto;
   padding: 0;
-  min-width: 920px;
+  min-width: 320px;
   position: relative;
  }
  
@@ -186,13 +186,14 @@
  }
  
  .yslov_img {
+  transform: scale(0.8);
   margin: 1%;
   width: 25%;
   height: 17%;
  }
  
  .yslov_img:hover {
-  flex-grow: 2;
+  transform: scale(1.2);
   transition: 2s;
  }
  
@@ -213,7 +214,7 @@
   cursor: pointer;
  }
  
- @media screen and (max-width:768px) {
+ @media screen and (max-width:768px) and (min-width:320px) {
   .sidebar_spisok li {
    border: 3px solid black;
    display: inline-block;
@@ -226,7 +227,7 @@
   }
   .sidebar {
    width: 100%;
-   height: 30px;
+   height: 60px;
    position: absolute;
    bottom: 100px;
    text-align: center;
@@ -242,3 +243,33 @@
   }
  }
  
+ @media screen and (max-width:319px) {
+  .sidebar_spisok li {
+   border: 3px solid black;
+   display: inline-block;
+   font-size: 20px;
+  }
+  .content {
+   width: 100%;
+   margin: 0;
+   /*margin-bottom: 200px;*/
+   font-size: 30px;
+  }
+  .sidebar {
+   width: 100%;
+   height: 90px;
+   position: absolute;
+   bottom: 100px;
+   text-align: center;
+  }
+  .header_center {
+   display: none;
+  }
+  .header_right {
+   display: none;
+  }
+  .header_left {
+   margin-left: calc(50% - 50px);
+  }
+  .ceni_content{height:100%;}
+ }
